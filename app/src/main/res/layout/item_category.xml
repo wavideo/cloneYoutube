@@ -13,20 +13,10 @@
         android:layout_height="30dp"
 
         android:background="@drawable/mask_round_for_category"
-        android:backgroundTint="@color/gray"
+        android:backgroundTint="@color/gray_background"
 
         android:paddingHorizontal="8dp"
         android:paddingVertical="3dp">
-
-        <ImageView
-            android:id="@+id/iv_img"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:src="@color/gray"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_text"
@@ -39,7 +29,6 @@
             android:gravity="center"
             android:maxLines="1"
             android:text="전체"
-            android:visibility="visible"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

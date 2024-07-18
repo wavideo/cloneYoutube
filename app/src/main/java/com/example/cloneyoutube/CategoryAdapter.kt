@@ -1,6 +1,7 @@
 package com.example.cloneyoutube
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cloneyoutube.databinding.ItemCategoryBinding
@@ -8,7 +9,6 @@ import com.example.cloneyoutube.databinding.ItemCategoryBinding
 class CategoryAdapter (val items:MutableList<CategoryData>) : RecyclerView.Adapter<CategoryAdapter.Holder>() {
     inner class Holder (val binding: ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root){
         val background = binding.clBackground
-        val img = binding.ivImg
         val text = binding.tvText
     }
 
@@ -17,8 +17,17 @@ class CategoryAdapter (val items:MutableList<CategoryData>) : RecyclerView.Adapt
         return Holder(binding)
     }
 
+    interface ItemClick {
+        fun onClick (view : View, position : Int)
+    }
+    var itemClick :ItemClick? = null
+
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.text.text = CategoryDataManager.items[position].text
+
+        holder.itemView.setOnClickListener {
+            itemClick?.onClick(it, position)
+        }
     }
 
     override fun getItemCount(): Int {

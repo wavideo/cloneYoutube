@@ -1,7 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+//    id ("com.android.application")
+//    id ("kotlin-android")
+//    id ("kotlin-parcelize")
+
 }
+
 
 android {
     namespace = "com.example.cloneyoutube"
@@ -49,4 +54,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("androidx.fragment:fragment-ktx:1.8.1")
+//    implementation ("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
 }

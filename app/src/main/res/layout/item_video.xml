@@ -3,29 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="20dp">
+    android:layout_height="wrap_content">
 
     <!--썸네일-->
     <ImageView
         android:id="@+id/iv_thumb"
+        android:layout_marginHorizontal="15dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
+        android:background="@drawable/mask_round_for_category"
+        android:clipToOutline="true"
         android:src="@drawable/ic_launcher_background"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_bottombar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_thumb">
 
@@ -44,6 +45,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:paddingTop="3dp"
             android:paddingEnd="10dp"
             android:paddingBottom="5dp"
             android:text="안녕하안하안녕하안녕하세요"
@@ -69,9 +71,10 @@
 
         <ImageView
             android:id="@+id/btn_menu"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@color/gray"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_more"
+            android:tint="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

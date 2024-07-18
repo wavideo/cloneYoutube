@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="btn_radius">8dp</dimen>
+    <dimen name="radius3">16dp</dimen>
+
+</resources>
